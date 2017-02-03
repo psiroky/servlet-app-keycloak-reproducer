@@ -1,0 +1,13 @@
+ <subsystem xmlns="urn:jboss:domain:keycloak:1.1">
+            <secure-deployment name="servlet-app.war">
+                <realm>servlet-app</realm>
+                <resource>servlet-app</resource>
+                <enable-basic-auth>true</enable-basic-auth>
+                <realm-public-key>add-actual-public-key-here</realm-public-key>
+                <auth-server-url>http://localhost:8180/auth</auth-server-url>
+                <ssl-required>external</ssl-required>
+                <principal-attribute>preferred_username</principal-attribute>
+                <credential name="secret">add-actual-secret-here</credential>
+            </secure-deployment>
+        </subsystem>
+
